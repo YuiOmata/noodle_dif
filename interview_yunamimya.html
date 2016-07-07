@@ -18,6 +18,7 @@
   </script>
 </head>
 <body>
+  <!-- この部分つかってみてね -->
  <div id="RewritingDiv">
     <center><img src="./ゆなみや店長.png"　width="150" height="500"></center>
    <!--  t.jsのサンプル同様に改行がおかしくなるのでpタグつけませんでした -->
@@ -26,11 +27,15 @@
     <a href="#" class="switch" onclick="onClickButton();"><u>▼</u></a>
     </div>
 </div>
+
+
   <div class="RewritingDiv">
     <div id="message">
+  <div id="message"　class="RewritingDiv">
+    <p>
       ここが書き換わります．
-    </div>
-    <a class="switch" onclick="onClickButton();"><u>▽</u></a>
+      <a class="switch" onclick="onClickButton();"><u>▽</u></a>
+    </p>
   </div>
   <script>
     var buttonCounter = 0;
@@ -38,9 +43,9 @@
       console.log("OK")
         if(buttonCounter == 0){
           target = document.getElementById("message");
-          console.log(target)
-          target.innerHTML="first change"
-              // "最初の書き換え<a class='switch' onclick='onClickButton();'><u>▽</u></a>;"
+          console.log(target)  //***一回targetにDOMを入れるみたいな感じで、コンソールでデバグできるので覚えておこう！正しく取れてないとnull帰ってくる***//
+          target.innerHTML= "最初の書き換え<a class='switch' onclick='onClickButton();'><u>▽</u></a>;";
+          //***それから”と”’の’違いだけど、ちょっと調べてみてほしい。基本的に一番外側が””であとは’’って覚えておけばOK!!***//
           // buttonCounter++;
         }
       //   else if(buttonCounter == 1){
