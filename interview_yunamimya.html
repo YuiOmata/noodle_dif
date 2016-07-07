@@ -26,6 +26,33 @@
     <a href="#" class="switch" onclick="onClickButton();"><u>▼</u></a>
     </div>
 </div>
-
+  <div class="RewritingDiv">
+    <div id="message">
+      ここが書き換わります．
+    </div>
+    <a class="switch" onclick="onClickButton();"><u>▽</u></a>
+  </div>
+  <script>
+    var buttonCounter = 0;
+    function onClickButton(){
+      console.log("OK")
+        if(buttonCounter == 0){
+          target = document.getElementById("message");
+          console.log(target)
+          target.innerHTML="first change"
+              // "最初の書き換え<a class='switch' onclick='onClickButton();'><u>▽</u></a>;"
+          // buttonCounter++;
+        }
+      //   else if(buttonCounter == 1){
+      // document.getElementById(".RewritingDiv").innerHTML =
+      //     "2回目の書き換え"<a class="switch" onclick="onClickButton();><u>▽</u></a>;"
+      // buttonCounter++;
+      //   }
+      //   else if(buttonCounter == 2){
+      // document.getElementById(".RewritingDiv").innerHTML =
+      //     "3回目の書き換え．<br />最初に戻ります<a class="switch" onclick="onClickButton();"><u>▽</u></a>;"
+      // buttonCounter = 0;
+    }
+  </script>
 </body>
 </html>
