@@ -43,7 +43,8 @@
       console.log("OK")
         if(buttonCounter == 0){
           target = document.getElementById("message");
-          console.log(target)  //***一回targetにDOMを入れるみたいな感じで、コンソールでデバグできるので覚えておこう！正しく取れてないとnull帰ってくる***//
+          console.log(target)
+           //***一回targetにDOMを入れるみたいな感じで、コンソールでデバグできるので覚えておこう！正しく取れてないとnull帰ってくる***//
           target.innerHTML= "最初の書き換え<a class='switch' onclick='onClickButton();'><u>▽</u></a>;";
           //***それから”と”’の’違いだけど、ちょっと調べてみてほしい。基本的に一番外側が””であとは’’って覚えておけばOK!!***//
           // buttonCounter++;
