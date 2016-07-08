@@ -7,58 +7,36 @@
   <link rel="stylesheet" href="./interview.css" />
   <script type="text/javascript" src="./jquery.js"></script>
   <script type="text/javascript" src="./t.js"></script>
-  <script type="text/javascript" src="./typewrite.js"></script>
+  <script type="text/javascript" src="dispByChar.js"></script>
+  <!-- <script type="text/javascript" src="./typewrite.js"></script> -->
   <script>
     $(function(){
-    $(".message").t({
-        speed : 200,
-        speed_vary : false,
-    })
+      $(".message").t({
+          speed : 200,
+          speed_vary : false,
+      });
     });
   </script>
 </head>
 <body>
-  <!-- この部分つかってみてね -->
- <div id="RewritingDiv">
+  <div id="RewritingDiv">
     <center><img src="./ゆなみや店長.png"　width="150" height="500"></center>
-   <!--  t.jsのサンプル同様に改行がおかしくなるのでpタグつけませんでした -->
+    <!--  t.jsのサンプル同様に改行がおかしくなるのでpタグつけませんでした -->
     <div class="message">
-        ここが書き換わります
-    <a href="#" class="switch" onclick="onClickButton();"><u>▼</u></a>
+      ここが書き換わります
+      <a href="#" class="switch" onclick="onClickButton();"><u>▼</u></a>
     </div>
-</div>
+  </div>
 
 
   <div class="RewritingDiv">
     <div id="message">
   <div id="message"　class="RewritingDiv">
-    <p>
-      ここが書き換わります．
-      <a class="switch" onclick="onClickButton();"><u>▽</u></a>
-    </p>
-  </div>
-  <script>
-    var buttonCounter = 0;
-    function onClickButton(){
-      console.log("OK")
-        if(buttonCounter == 0){
-          target = document.getElementById("message");
-          console.log(target)
-           //***一回targetにDOMを入れるみたいな感じで、コンソールでデバグできるので覚えておこう！正しく取れてないとnull帰ってくる***//
-          target.innerHTML= "最初の書き換え<a class='switch' onclick='onClickButton();'><u>▽</u></a>;";
-          //***それから”と”’の’違いだけど、ちょっと調べてみてほしい。基本的に一番外側が””であとは’’って覚えておけばOK!!***//
-          // buttonCounter++;
-        }
-      //   else if(buttonCounter == 1){
-      // document.getElementById(".RewritingDiv").innerHTML =
-      //     "2回目の書き換え"<a class="switch" onclick="onClickButton();><u>▽</u></a>;"
-      // buttonCounter++;
-      //   }
-      //   else if(buttonCounter == 2){
-      // document.getElementById(".RewritingDiv").innerHTML =
-      //     "3回目の書き換え．<br />最初に戻ります<a class="switch" onclick="onClickButton();"><u>▽</u></a>;"
-      // buttonCounter = 0;
-    }
-  </script>
+
+  <!-- この部分つかってみてね -->
+  <h1>１文字ずつページ上に文字を表示しクリックで一括表示する</h1>
+  <div id="result"></div>
+
+
 </body>
 </html>
